@@ -14,7 +14,6 @@ const prefix = botSettings.prefix;
 
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
-bot.mutes = require("./mutes.json");
 
 // Modlog testing.
 //bot.on('messageUpdate', (message, newMessage, guild) => {
@@ -126,30 +125,6 @@ bot.on("ready", () => {
 //			bot.user.setAvatar('./avatar.png')
 //  			.then(user => console.log(`New avatar set!`))
 //  			.catch(console.error);
-
-	bot.setInterval(() => {
-		for(let i in bot.mutes) {
-			let time = bot.mutes[i].time;
-			let guildId = bot.mutes[i].guild;
-			let guild = bot.guilds.get(guildId);
-			let member = guild.members.get(i);
-			let mutedRole = guild.roles.find(r => r.name === "XaQ Muted");
-			if(!mutedRole) continue;
-
-			if(Date.now() > time) {
-				console.log(`${i} is now able to be unmuted!`);
-
-				member.removeRole(mutedRole);
-				delete bot.mutes[i];
-
-				fs.writeFile("./mutes.json", JSON.stringify(bot.mutes), err => {
-					if(err) throw err;
-					console.log(`I have unmuted ${member.user.tag}.`);
-				});
-			}
-		}
-	}, 5000)
-});
 
 //bot.on("guildCreate", guild => {
 //	guild.defaultChannel.send("Hey! Thanks for inviting me. To see my commands just say `x!help`. Have fun using XaQBot :joy:");

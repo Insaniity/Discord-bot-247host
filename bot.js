@@ -121,7 +121,7 @@ fs.readdir("./cmds/", (err, files) => {
 
 bot.on("ready", () => {
    	  bot.user.setStatus("online"); //dnd , online , ldle
-      bot.user.setGame("x!help", "https://twitch.tv/twitch");
+      bot.user.setGame("Being rewritted.");
       console.log("Running as user "+bot.user.username+"#"+bot.user.discriminator+".");
 //			bot.user.setAvatar('./avatar.png')
 //  			.then(user => console.log(`New avatar set!`))

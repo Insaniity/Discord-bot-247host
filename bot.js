@@ -125,6 +125,7 @@ bot.on("ready", () => {
 //			bot.user.setAvatar('./avatar.png')
 //  			.then(user => console.log(`New avatar set!`))
 //  			.catch(console.error);
+});
 
 //bot.on("guildCreate", guild => {
 //	guild.defaultChannel.send("Hey! Thanks for inviting me. To see my commands just say `x!help`. Have fun using XaQBot :joy:");

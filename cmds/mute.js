@@ -7,7 +7,7 @@ module.exports.run =  (bot, message, args) => {
 	if(toMute.id === message.author.id) return message.channel.send("You cannot mute yourself.");
 	if(toMute.highestRole.position >= message.member.highestRole.position) return message.channel.send("You cannot mute a member who is higher or has the same role as you.");
 
-	let role = message.guild.roles.find(r => r.name === "XaQ Muted");
+	let role = message.guild.roles.find(r => r.name === "Muted");
 	if(!role) {
 		try {
 			role = message.guild.createRole({

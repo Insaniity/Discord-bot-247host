@@ -24,7 +24,7 @@ module.exports.run = (bot, message, args) => {
             }
           ]
         }}); */
-			message.author.send("**I am currently being rewritten. My only command is `x!ping`**")
+			message.author.send("**I am currently being rewritten, here is my current command list. (Beta)\nx!help\nx!invite\nx!kick\nx!mute\nx!unmute**")
 }
 
 module.exports.help = {

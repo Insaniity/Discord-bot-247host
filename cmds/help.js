@@ -24,7 +24,7 @@ module.exports.run = (bot, message, args) => {
             }
           ]
         }}); */
-			message.author.send("**I am currently being rewritten, here is my current command list. (Beta)\nx!help\nx!invite\nx!kick <usr>\nx!mute <usr>\nx!unmute <usr>\nx!purge <int> `This is buggy, you may need to do it like x!purge 100 100`\nx!emojify <var>**"
+			message.author.send("**I am currently being rewritten, here is my current command list. (Beta)\nx!help\nx!invite\nx!kick <usr>\nx!mute <usr>\nx!unmute <usr>\nx!purge <int> `This is buggy, you may need to do it like x!purge 100 100`\nx!emojify <var>**");
 }
 
 module.exports.help = {

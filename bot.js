@@ -155,7 +155,7 @@ bot.on("ready", () => {
 //	guild.defaultChannel.send("Hey! Thanks for inviting me. To see my commands just say `x!help`. Have fun using XaQBot :joy:");
 //});
 
-bot.on("message", async message => {
+bot.on("message", message => {
 	if(message.author.bot) return;
 	if(message.content.includes("<@335351230601887764> help")){
 		message.author.send("My prefix is x!\nSay x!help in a server to get my commands!")

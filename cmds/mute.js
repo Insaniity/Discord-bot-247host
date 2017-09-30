@@ -1,3 +1,5 @@
+const fs = module.require("fs");
+
 module.exports.run =  (bot, message, args) => {
 	if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You do not have manage messages.");
 

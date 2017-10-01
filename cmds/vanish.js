@@ -6,13 +6,13 @@ module.exports.run = (bot, message, args) => {
   if (!bot.lockit) bot.lockit = [];
   let time = args.join(' ');
   let validUnlocks = ['release', 'unlock'];
-  if (!time) return message.reply('You must set a duration for the lockdown in either hours, minutes or seconds');
+  if (!time) return message.reply('You must set a duration in either hours, minutes or seconds');
 
   if (validUnlocks.includes(time)) {
     message.channel.overwritePermissions(message.guild.id, {
       SEND_MESSAGES: null
     }).then(() => {
-      message.channel.send('Lockdown lifted.');
+      message.channel.send('Whoosh! The channel is gone!');
       clearTimeout(bot.lockit[message.channel.id]);
       delete bot.lockit[message.channel.id];
     }).catch(error => {
@@ -28,7 +28,7 @@ module.exports.run = (bot, message, args) => {
         bot.lockit[message.channel.id] = setTimeout(() => {
           message.channel.overwritePermissions(message.guild.id, {
             SEND_MESSAGES: null
-          }).then(message.channel.send('Lockdown lifted.')).catch(console.error);
+          }).then(message.channel.send('Channel is back.')).catch(console.error);
           delete bot.lockit[message.channel.id];
         }, ms(time));
 

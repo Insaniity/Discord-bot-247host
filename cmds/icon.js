@@ -1,9 +1,9 @@
 module.exports.run = (bot, message, args) => {
-	let msg = await message.channel.send("Generating avatar...");
+	let msg = message.channel.send("Generating avatar...");
 
 	if(!message.guild.iconURL) return msg.edit("No icon.");
 
-	await message.channel.send({files: [
+	message.channel.send({files: [
 		{
 			attachment: message.guild.iconURL,
 			name: "icon.png"

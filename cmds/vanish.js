@@ -20,7 +20,7 @@ module.exports.run = (bot, message, args) => {
     });
   } else {
     message.channel.overwritePermissions(message.guild.id, {
-      SEND_MESSAGES: false
+      SEND_MESSAGES: false,
       READ_MESSAGES: false
     }).then(() => {
       message.channel.send(`Channel locked down for ${ms(ms(time), { long:true })}`).then(() => {

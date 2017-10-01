@@ -23,11 +23,12 @@ module.exports.run = (bot, message, args) => {
       SEND_MESSAGES: false,
       READ_MESSAGES: false
     }).then(() => {
-      message.channel.send(`Channel locked down for ${ms(ms(time), { long:true })}`).then(() => {
+      message.channel.send(`Channel hidden for ${ms(ms(time), { long:true })}`).then(() => {
 
         bot.lockit[message.channel.id] = setTimeout(() => {
           message.channel.overwritePermissions(message.guild.id, {
-            SEND_MESSAGES: null
+            SEND_MESSAGES: null,
+            READ_MESSAGES: null
           }).then(message.channel.send('Channel is back.')).catch(console.error);
           delete bot.lockit[message.channel.id];
         }, ms(time));

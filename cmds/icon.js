@@ -1,7 +1,7 @@
 module.exports.run = (bot, message, args) => {
-	let msg = message.channel.send("Generating avatar...");
+	message.channel.send("Fetching icon..")
 
-	if(!message.guild.iconURL) return msg.edit("No icon.");
+	if(!message.guild.iconURL) return message.edit("No icon.");
 
 	message.channel.send({files: [
 		{
@@ -10,7 +10,6 @@ module.exports.run = (bot, message, args) => {
 		}
 	]});
 
-	msg.delete();
 }
 
 module.exports.help = {

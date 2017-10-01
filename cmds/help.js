@@ -1,6 +1,6 @@
 module.exports.run = (bot, message, args) => {
 	message.channel.send(":mailbox_with_mail: DM'ed you!")
-/*	message.author.send("", {embed: {
+	message.author.send("", {embed: {
           color: 0xd2f9f6,
           title: ``,
           url: '',
@@ -23,8 +23,8 @@ module.exports.run = (bot, message, args) => {
               value: "**@ or DM the bot to talk to it!**"
             }
           ]
-        }}); */
-			message.author.send("**I am currently being rewritten, here is my current command list. (Beta)\nx!help\nx!invite\nx!kick <usr>\nx!mute <usr>\nx!unmute <usr>\nx!purge <int> `This is buggy, you may need to do it like x!purge 100 100`\nx!8ball <var>\nx!bill\nx!avatar <usr>**");
+        }}); 
+		//	message.author.send("**I am currently being rewritten, here is my current command list. (Beta)\nx!help\nx!invite\nx!kick <usr>\nx!mute <usr>\nx!unmute <usr>\nx!purge <int> `This is buggy, you may need to do it like x!purge 100 100`\nx!8ball <var>\nx!bill\nx!avatar <usr>**");
 }
 
 module.exports.help = {

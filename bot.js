@@ -144,8 +144,7 @@ bot.on("message", message => {
         message.channel.stopTyping();
       }, Math.random() * (1 - 3) + 1 * 1000);
     }); return;
-*/
-return;
+*/ return;
 	}
 
 	let messageArray = message.content.split(/\s+/g);

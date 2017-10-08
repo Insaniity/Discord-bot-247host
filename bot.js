@@ -137,13 +137,14 @@ bot.on("message", message => {
 		message.author.send("My prefix is x!\nSay x!help in a server to get my commands!")
 	}
 	if(message.channel.type === "dm") {
- 	clbot.write(message.content, (response) => {
+/* 	clbot.write(message.content, (response) => {
       message.channel.startTyping();
       setTimeout(() => {
         message.channel.send(response.output).catch(console.error);
         message.channel.stopTyping();
       }, Math.random() * (1 - 3) + 1 * 1000);
     }); return;
+*/
 	}
 
 	let messageArray = message.content.split(/\s+/g);
@@ -153,13 +154,14 @@ bot.on("message", message => {
     var suffix = message.content.substring(cmdTxt.length + 2);
 
 	if(message.content.includes('<@335351230601887764>')) {
-    clbot.write(message.content, (response) => {
+ /*   clbot.write(message.content, (response) => {
       message.channel.startTyping();
       setTimeout(() => {
         message.channel.send(response.output).catch(console.error);
         message.channel.stopTyping();
       }, Math.random() * (1 - 3) + 1 * 1000);
-    });
+    }); */
+message.channel.send(“My cleverbot api has run out ;c . This feature will be back soon.”)
   }
 
 	if(!command.startsWith(prefix)) return;

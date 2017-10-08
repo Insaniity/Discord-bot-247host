@@ -145,6 +145,7 @@ bot.on("message", message => {
       }, Math.random() * (1 - 3) + 1 * 1000);
     }); return;
 */
+return;
 	}
 
 	let messageArray = message.content.split(/\s+/g);

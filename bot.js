@@ -161,7 +161,7 @@ bot.on("message", message => {
         message.channel.stopTyping();
       }, Math.random() * (1 - 3) + 1 * 1000);
     }); */
-message.channel.send(“My cleverbot api has run out ;c . This feature will be back soon.”)
+message.channel.send("I can't respond to this right now.")
   }
 
 	if(!command.startsWith(prefix)) return;

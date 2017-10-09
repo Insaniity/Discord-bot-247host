@@ -8,7 +8,7 @@ module.exports.run = (bot, message, args) => {
           fields: [
             {
               name: "Moderation",
-              value: `• x!purge - purges messages\n• x!ban - bans mentioned user\n• x!softban - bans then unbans mentioned user\n• x!kick - kicks mentioned user\n• x!modlog - explains how to setup logs\n• x!mute - mutes mentioned user\n• x!unmute - unmutes mentioned user`
+              value: `• x!purge - purges messages **Command is buggy ATM. Do x!purge 100 100 to purge 100 messages.**\n• x!ban - bans mentioned user\n• x!softban - bans then unbans mentioned user\n• x!kick - kicks mentioned user\n• x!modlog - explains how to setup logs\n• x!mute - mutes mentioned user\n• x!unmute - unmutes mentioned user`
             },
             {
               name: "Fun",
